@@ -1,0 +1,23 @@
+{
+  "name": "front_end_utility_functions",
+  "version": "1.0.0",
+  "description": "Common Front-End Utility Functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nameistao/Front_End_Utility_Functions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nameistao/Front_End_Utility_Functions/issues"
+  },
+  "homepage": "https://github.com/nameistao/Front_End_Utility_Functions#readme",
+  "devDependencies": {
+    "jest": "^27.4.5"
+  }
+}
