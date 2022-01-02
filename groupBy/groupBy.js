@@ -1,13 +1,16 @@
-const groupBy = (arr, size = 1) => {
-  const output = [];
-  const temp = [];
-  arr.forEach((elem, index) => {
-    temp.push(elem);
-    if (temp.length === size || index === arr.length - 1) {
-      output.push([...temp]);
-      temp.length = 0;
+const groupBy = (arr, func) => {
+  const output = {};
+
+  arr.forEach((elem) => {
+    const key = func(elem);
+    if ([key] in output) {
+      output[key].push(elem);
+    } else {
+      output[key] = [elem];
     }
   });
 
   return output;
 };
+
+export default groupBy;
