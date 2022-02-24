@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content="description"/>
+        <meta name="author" content="tao luo"/>
+        <title>title</title>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Inputs</legend>
+                <label for="username">Username:</label>
+                <input type="text" placeholder="Username" id="username" name="username" required/>
+                <label for="password">Password:</label> 
+                <input type="password" placeholder="Password" id="password" name="password" minlength="6" required/>
+                <label for="member">Member</label>
+                <input id="member" type="checkbox"/>
+                <label for="date">Date</label>
+                <input id="date" type="date" />
+                <label for="dog">dog</label>
+                <input id="dog" type="radio" name="animal" value="dog"/>
+                <label for="cat">cat</label>
+                <input id="cat" type="radio" name="animal" value="cat"/>
+            </fieldset>
+            <button type="submit">Submit</button>   
+        </form>
+    </body>
+</html>
