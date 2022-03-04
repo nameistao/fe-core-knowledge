@@ -24,3 +24,21 @@ chaining
 
 const final = Promise.resolve(5);
 final.then(console.log).finally(() => console.log("finally"));
+
+Promise.all([
+  new Promise((res, rej) => setTimeout(() => res(3), 3000)),
+  new Promise((res, rej) => setTimeout(() => res(2), 2000)),
+  new Promise((res, rej) => setTimeout(() => res(1), 1000)),
+]).then((value) => console.log("all " + value));
+
+Promise.race([
+  new Promise((res, rej) => setTimeout(() => res(3), 3000)),
+  new Promise((res, rej) => setTimeout(() => res(2), 2000)),
+  new Promise((res, rej) => setTimeout(() => res(1), 1000)),
+]).then((value) => console.log("race " + value));
+
+Promise.any([
+  new Promise((res, rej) => setTimeout(() => res(3), 3000)),
+  new Promise((res, rej) => setTimeout(() => res(2), 2000)),
+  new Promise((res, rej) => setTimeout(() => rej(1), 1000)),
+]).then((value) => console.log("any " + value));
