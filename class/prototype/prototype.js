@@ -1,22 +1,19 @@
-const user = {
-  isUser: true,
+const parent = {
+  key: "val",
 };
 
-const admin = {
-  isAdmin: true,
-};
+//create child with parent as prototype
+const child = Object.create(parent);
+console.log(Object.getPrototypeOf(child));
 
-Object.setPrototypeOf(admin, user);
+//set parent as prototype
+const child2 = {};
+Object.setPrototypeOf(child2, parent);
+console.log(Object.getPrototypeOf(child2));
 
-console.log(admin.isUser);
-
-admin.isUser = false;
-
-console.log(admin.isUser);
-
-const guest = Object.create(user);
-
-console.log(guest.isUser);
-
-const newObj = new Object();
-console.log(newObj.toString === Object.prototype.toString);
+//set parent as prototype using assign
+const child3 = Object.assign(Object.create(parent), {
+  childKey: "childVal",
+});
+console.log(Object.getPrototypeOf(child3));
+console.log(child3);
